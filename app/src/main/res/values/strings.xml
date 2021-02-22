@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="phone_textview">PHONE</string>
+    <string name="chat_textview">CHAT</string>
+    <string name="explore_textview">EXPLORE</string>
+    <string name="wallet_textview">WALLET</string>
+    <string name="hello_phone_textview">Hello phone fragment</string>
+    <string name="hello_chat_textview">Hello chat fragment</string>
+    <string name="hello_explore_textview">Hello explore fragment</string>
+    <string name="hello_wallet_textview">Hello wallet fragment</string>
+</resources>
