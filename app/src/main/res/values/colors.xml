@@ -11,4 +11,8 @@
     <color name="light_gray">#b3ffffff</color>
     <color name="gray">#FF888888</color>
     <color name="translucent_text">#8fffffff</color>
+    <color name="container_progress">#5FC5C9</color>
+    <color name="qrcode">#6FDCDB</color>
+    <color name="choose_item">#52B1BB</color>
+    <color name="container_background">#F7F7F7</color>
 </resources>
