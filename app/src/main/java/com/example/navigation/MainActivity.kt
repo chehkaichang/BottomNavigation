@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,7 +35,15 @@ class MainActivity : FragmentActivity(), View.OnClickListener {
             window.statusBarColor = Color.TRANSPARENT
         }
 
+        initView()
         initListener()
+    }
+
+    private fun initView() {
+        iv_vote_phone.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+        iv_vote_chat.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+        iv_vote_explore.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+        iv_vote_wallet.setColorFilter(ContextCompat.getColor(applicationContext,R.color.teal_700))
     }
 
     private fun initListener() {
@@ -47,27 +56,40 @@ class MainActivity : FragmentActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.ll_vote_phone -> {
+                iv_vote_phone.setColorFilter(ContextCompat.getColor(applicationContext,R.color.teal_700))
+                iv_vote_chat.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_explore.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_wallet.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
                 val manager = supportFragmentManager
                 val transaction = manager.beginTransaction()
                 transaction.replace(R.id.rl_vote_container, PhoneFragment()).commit()
             }
             R.id.ll_vote_chat -> {
+                iv_vote_chat.setColorFilter(ContextCompat.getColor(applicationContext,R.color.teal_700))
+                iv_vote_phone.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_explore.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_wallet.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
                 val manager = supportFragmentManager
                 val transaction = manager.beginTransaction()
                 transaction.replace(R.id.rl_vote_container, ChatFragment()).commit()
             }
             R.id.ll_vote_explore -> {
+                iv_vote_explore.setColorFilter(ContextCompat.getColor(applicationContext,R.color.teal_700))
+                iv_vote_phone.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_chat.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_wallet.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
                 val manager = supportFragmentManager
                 val transaction = manager.beginTransaction()
                 transaction.replace(R.id.rl_vote_container, ExploreFragment()).commit()
             }
             R.id.ll_vote_wallet -> {
+                iv_vote_wallet.setColorFilter(ContextCompat.getColor(applicationContext,R.color.teal_700))
+                iv_vote_phone.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_chat.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
+                iv_vote_explore.setColorFilter(ContextCompat.getColor(applicationContext,R.color.black))
                 val manager = supportFragmentManager
                 val transaction = manager.beginTransaction()
                 transaction.replace(R.id.rl_vote_container, WalletFragment()).commit()
-            }
-            else -> {
-                // else condition
             }
         }
     }

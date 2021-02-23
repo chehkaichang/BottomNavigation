@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--默認顏色-->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@color/teal_700" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    <!--進度顏色-->
+    <item android:id="@android:id/progress">
+        <scale android:scaleWidth="100%"
+            android:drawable="@drawable/progressbar_circle_clip"   />
+        <!--<clip>-->
+        <!--<shape>-->
+        <!--<solid android:color="@color/physiological_time_progressbar" />-->
+        <!--</shape>-->
+        <!--</clip>-->
+    </item>
+    <!--第二進度顏色-->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape >
+                <solid android:color="@color/black"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>
