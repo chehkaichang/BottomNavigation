@@ -50,8 +50,10 @@ class WalletFragment : Fragment() {
     }
 
     private fun setupViewPager(viewPager: ViewPager) {
-        pagerAdapter!!.addFragment(ContainerFragment(), getString(R.string.container_textview))
-        pagerAdapter!!.addFragment(ExchangeFragment(), getString(R.string.exchange_textview))
-        viewPager.adapter = pagerAdapter
+        if(pagerAdapter!!.count == 0) {
+            pagerAdapter!!.addFragment(ContainerFragment(), getString(R.string.container_textview))
+            pagerAdapter!!.addFragment(ExchangeFragment(), getString(R.string.exchange_textview))
+            viewPager.adapter = pagerAdapter
+        }
     }
 }
